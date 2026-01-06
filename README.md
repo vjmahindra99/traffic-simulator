@@ -39,8 +39,7 @@ The system is implementated using Python and Pygame framework featuring a graphi
 ### **Simulation Modes**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8688a722-7b30-4518-a08b-6de90562ec7a"
-    width="600" />
+  <img src="assets/smart_demo.gif" width="600" />
   <br>
   <em>Smart Traffic Simulator running with adaptive signal control</em>
 </p>
