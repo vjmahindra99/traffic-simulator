@@ -1,4 +1,4 @@
-# 🚦Traffic Density-Based Simulator
+# **🚦Traffic Density-Based Simulator**
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Pygame](https://img.shields.io/badge/Pygame-2.x-green)
@@ -8,7 +8,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
 ## **📌 Summary**<br>
-A Python-based traffic intersection simulator comparing fixed-time and adaptive signal control using real-time vehicle density. <br>
+A Python-based traffic intersection simulator comparing fixed-time and adaptive signal control using real-time vehicle density.
 
 ## **📝 Description**<br>
 <p align="justify">
@@ -23,7 +23,7 @@ An adaptive control algorithm adjusts green signal durations based on real-time 
   <img src="https://github.com/user-attachments/assets/5027e66f-cf53-4e74-8e45-8e04e9e95651"
        width="500" />
   <br>
-  <em>Traffic Simulator – Main Menu</em>
+  <em>Traffic Simulator Main Menu</em>
 </p>
 
 <p align="justify">
@@ -34,9 +34,8 @@ The system is implementated using Python and Pygame framework featuring a graphi
 <p align="justify">
   The simulator provides a direct and fair comparison between fixed-time, rule-based adaptive and vision-based adaptive traffic systems using metrics such as vehicle throughput, waiting time and signal utilization.
 </p>
-<br>
 
-### **Simulation Modes**
+## **🎮 Simulation Modes Overview**
 
 <p align="center">
   <img src="assets/simulation_demo.gif" width="600" />
@@ -61,11 +60,11 @@ The system is implementated using Python and Pygame framework featuring a graphi
 
 # **⚙️ Installation & Setup**
 
-## Requirements<br>
+## Requirements  
 Install the following packages for the simulator app:
-- Python 3.8+<br>
+- Python 3.8+
 👉 Download: https://www.python.org/downloads/
-- Pygame<br>
+- Pygame
 👉 Download: https://www.pygame.org/wiki/GettingStarted
 ```
 python3 -m pip install -U pygame --user
@@ -87,11 +86,11 @@ PyTorch can be installed with **GPU support**. CUDA is optional and needed for f
 
 ### *⚠️ CUDA Requirement*
 👉 Download: https://developer.nvidia.com/cuda-downloads
-<br><br>CUDA is **not required** to run this simulator.  
+<br><br>CUDA is **optional** to run this simulator but recommended.
 All simulation modes, including the YOLO-based ATLAS mode, can run on CPU.
-CUDA support is optional and may be used to accelerate YOLO inference if an NVIDIA GPU is available.
+CUDA support may be used to accelerate YOLO inference if an NVIDIA GPU is available.
 
-### 🧩 Mode Dependencies
+### 🧩 Simulation Mode Dependencies
 <div align="center">
 
 <table>
@@ -121,12 +120,11 @@ CUDA support is optional and may be used to accelerate YOLO inference if an NVID
     <td align="center">✅</td>
     <td align="center">✅</td>
     <td align="center">✅</td>
-    <td align="center">⚠️ Optional</td>
+    <td align="center">⚠️ Optional (Recommended)</td>
   </tr>
 </table>
 
 </div>
-<br>
 
 ## Installation
 
@@ -141,18 +139,15 @@ Ensure the following software is installed:
   * Any Python-compatible IDE
 
 ### 2. 📁 Project Folder Setup
-
 * Download or clone the repository:
 ```
 git clone https://github.com/your-username/traffic-density-simulator.git
 ```
-
 * Make sure the entire folder is kept intact:
 ```
 Traffic_Simulator/
 ```
-
-*⚠️ Important*<br>
+*⚠️ Important*  
 Do not move or rename files inside the folder. All subfolders (assets, fixed_atlas, smart_atlas, atlas) must remain in the same structure.
 
 ### 3. 🧩 Open in Code Editor
@@ -180,18 +175,18 @@ The simulator window will open with a mode selection menu:
 ### 6. 📊 Simulation Results
 After each run:
 - Statistics are automatically saved as Excel (.xlsx) files
-- Results can be found inside each mode’s results/ folder<br><br>
+- Results can be found inside each mode’s results/ folder<br>  
 Example:
 ```
 fixed_atlas/results/
 smart_atlas/results/
 atlas/results/
 ```
-<br>
 
-## **📂 File Structure**
-```text
+## **🗂️ File Structure**
+```
 Traffic_Simulator/
+│
 │── main_menu.py                # Main menu and mode selection
 │
 │── assets/                     # Global assets for main menu
@@ -314,7 +309,40 @@ Traffic_Simulator/
 │   └── results/
 │       │── atlas_time_stats.xlsx
 │       │── atlas_runs_summary.xlsx
+└───
 ```
+
+## **📄 File Descriptions**
+
+### Root Files
+- `main_menu.py`  
+  Entry point of the application. Handles mode selection and launches the chosen simulation
+
+### Common Modules (Per Mode)
+- `controller.py`  
+  Controls traffic signal logic and green time allocation
+- `vehicle.py`  
+  Handles vehicle movement, speed and lane behavior
+- `traffic_signal.py`  
+  Manages signal states (red, yellow, green)
+- `settings.py`  
+  Stores configurable simulation parameters
+
+### ATLAS Simulation Files
+- `yolo_integration.py`  
+  Integrates YOLO object detection for real-time vehicle counting and density estimation.
+
+### Utilities
+- `export_stats.py`  
+  Exports simulation statistics to Excel (.xlsx) format
+- `stats_window.py`  
+  Displays live performance metrics during simulation run
+- `run_summary.py`  
+  Generates a summary of each simulation run in Excel (.xlsx) format
+- `📂 results/`  
+  Stores exported simulation outputs in Excel (.xlsx) format for offline analysis and comparison across all simulation modes
+- `📂 assets/`  
+  Contains all the resources required by the simulator including images, sound effects, background music, fonts and visual elements used in the graphical user interface
 
 # 📖 Citation
 If you use this project in academic work, please cite:
