@@ -62,9 +62,9 @@ The system is implementated using Python and Pygame framework featuring a graphi
 
 ## Requirements  
 Install the following packages for the simulator app:
-- Python 3.8+
+- Python 3.8+<br>
 👉 Download: https://www.python.org/downloads/
-- Pygame
+- Pygame<br>
 👉 Download: https://www.pygame.org/wiki/GettingStarted
 ```
 python3 -m pip install -U pygame --user
