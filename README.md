@@ -346,4 +346,4 @@ Traffic_Simulator/
 
 # 📖 Citation
 If you use this project in academic work, please cite:
-> Mahindra Vijay a/l Vijayan, *Adaptive Smart Traffic Light Control System using Deep Learning for Traffic Congestion Management*, 2026
+> Mahindra Vijay a/l Vijayan, *Adaptive Smart Traffic Light Control System using Deep Learning for Traffic Congestion Management*, 2025
